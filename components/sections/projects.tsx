@@ -88,7 +88,7 @@ export default function Projects() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <h2 className="text-sm  uppercase tracking-[0.3em] text-amber-600 font-medium">
+          <h2 className="text-md  uppercase tracking-[0.3em] text-amber-600 font-bold">
             Our Masterpieces
           </h2>
           <h3 className="mt-5  text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">

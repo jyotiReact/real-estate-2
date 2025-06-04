@@ -46,7 +46,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="flex flex-col justify-center"
           >
-            <h2 className="text-xs  uppercase tracking-[0.3em] text-amber-700 font-medium">
+            <h2 className="text-md   uppercase tracking-[0.3em] text-amber-700 font-bold">
               About Luxe Estates
             </h2>
             <h3 className="mt-6  text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
@@ -182,9 +182,7 @@ export default function About() {
               <button className="px-8 py-3 bg-amber-700 hover:bg-amber-800 text-white text-sm font-medium uppercase tracking-wider rounded-md transition duration-300 shadow-lg hover:shadow-xl">
                 View Portfolio
               </button>
-              <button className="px-8 py-3 border border-gray-300 hover:border-amber-600 text-gray-700 hover:text-amber-700 text-sm font-medium uppercase tracking-wider rounded-md transition duration-300">
-                Meet Our Team
-              </button>
+           
             </div>
           </motion.div>
         </div>

@@ -124,19 +124,17 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="mr-4 h-6 w-6 text-amber-600 mt-1" />
                 <span className="text-gray-300 text-base">
-                  123 Architecture Avenue, Design District, New York, NY 10001
+                  7/50 Aitken Street Gisborne VIC 3427{" "}
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-4 h-6 w-6 text-amber-600" />
-                <span className="text-gray-300 text-base">
-                  +1 (555) 123-4567
-                </span>
+                <span className="text-gray-300 text-base">1800 013 013</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-4 h-6 w-6 text-amber-600" />
                 <span className="text-gray-300 text-base">
-                  info@archipix.com
+                  admin@harwoodgroup.au
                 </span>
               </li>
             </ul>
@@ -150,7 +148,7 @@ export default function Footer() {
           className="mt-16 border-t border-amber-600/20 pt-8 text-center"
         >
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Archipix. All rights reserved.
+            © {new Date().getFullYear()} Harwood warragul. All rights reserved.
           </p>
         </motion.div>
       </div>

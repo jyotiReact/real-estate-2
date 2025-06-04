@@ -19,7 +19,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Archipix | Luxury Architecture & Interior Design",
+  title: "Ivy Real Estate ",
   description:
     "Premium architecture and interior design services for discerning clients seeking exceptional living spaces",
 };
