@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   motion,
@@ -10,36 +10,17 @@ import {
 } from "framer-motion";
 
 export default function Hero() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [videoIndex, setVideoIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
   const containerRef = useRef(null);
 
-  const videos = [
-    "https://videos.pexels.com/video-files/7578554/7578554-sd_640_360_30fps.mp4",
-    // "https://videos.pexels.com/video-files/5898302/5898302-sd_640_360_30fps.mp4",
-  ];
-
-  // Using Framer Motion's scroll hooks for smoother parallax
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
   });
 
-  // Parallax effects with different speeds for depth
   const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
   const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 800);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleVideoEnd = () => {
-    setVideoIndex((prev) => (prev + 1) % videos.length);
-  };
 
   return (
     <section
@@ -59,7 +40,6 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.video
-            key={videoIndex}
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
@@ -70,7 +50,6 @@ export default function Hero() {
             muted
             playsInline
             loop
-            onCanPlayThrough={() => setIsPlaying(true)}
             className="h-full w-full object-cover"
             style={{
               y: videoY,
