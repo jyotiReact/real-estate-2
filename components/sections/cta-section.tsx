@@ -21,11 +21,7 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
+  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -142,7 +138,6 @@ export default function Contact() {
 
           <motion.div variants={itemVariants} className="lg:col-span-2">
             <form
-              onSubmit={handleSubmit}
               className="rounded-2xl bg-white p-10 shadow-xl border border-amber-600/10"
             >
               <div className="grid gap-6 md:grid-cols-2 mb-6">
