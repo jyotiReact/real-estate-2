@@ -116,8 +116,8 @@ export default function Floorplan() {
               className="relative h-[600px] overflow-hidden rounded-xl shadow-2xl"
             >
               <Image
-                src={activePlan.image}
-                alt={activePlan.title}
+                src={activePlan?.image || "/images/home.jpg"} // Fallback image
+                alt={activePlan?.title || "Default plan"}
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 priority
@@ -126,7 +126,7 @@ export default function Floorplan() {
               <div className="absolute bottom-8 left-8">
                 <div className="bg-gradient-to-r from-amber-600 to-amber-700 px-6 py-3 rounded-lg shadow-xl">
                   <span className="font-medium text-white text-lg">
-                    {activePlan.specs.area}
+                    {activePlan?.specs.area}
                   </span>
                 </div>
               </div>
@@ -140,10 +140,10 @@ export default function Floorplan() {
             >
               <div className="mb-8">
                 <h4 className=" text-3xl font-bold text-gray-900">
-                  {activePlan.title}
+                  {activePlan?.title}
                 </h4>
                 <p className="mt-2 text-lg text-amber-700">
-                  {activePlan.subtitle}
+                  {activePlan?.subtitle}
                 </p>
               </div>
 
@@ -154,7 +154,7 @@ export default function Floorplan() {
                     Included Rooms
                   </h5>
                   <ul className="space-y-3">
-                    {activePlan.specs.rooms.map((room, index) => (
+                    {activePlan?.specs?.rooms.map((room, index) => (
                       <li key={index} className="flex items-start">
                         <svg
                           className="h-5 w-5 flex-shrink-0 text-amber-600 mt-1 mr-3"
@@ -181,7 +181,7 @@ export default function Floorplan() {
                     Premium Features
                   </h5>
                   <ul className="space-y-3">
-                    {activePlan.specs.features.map((feature, index) => (
+                    {activePlan?.specs?.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
                         <svg
                           className="h-5 w-5 flex-shrink-0 text-amber-600 mt-1 mr-3"

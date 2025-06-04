@@ -23,9 +23,7 @@ export default function Contact() {
 
   
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
+ 
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -153,7 +151,6 @@ export default function Contact() {
                     type="text"
                     placeholder="John Doe"
                     value={formData.name}
-                    onChange={handleChange}
                     className="border-amber-600/20 focus:border-amber-600 focus:ring-amber-600 bg-gray-50 text-base"
                   />
                 </div>
@@ -169,7 +166,6 @@ export default function Contact() {
                     type="email"
                     placeholder="john@example.com"
                     value={formData.email}
-                    onChange={handleChange}
                     className="border-amber-600/20 focus:border-amber-600 focus:ring-amber-600 bg-gray-50 text-base"
                   />
                 </div>
@@ -187,7 +183,6 @@ export default function Contact() {
                   type="text"
                   placeholder="Project Inquiry"
                   value={formData.subject}
-                  onChange={handleChange}
                   className="border-amber-600/20 focus:border-amber-600 focus:ring-amber-600 bg-gray-50 text-base"
                 />
               </div>
@@ -204,7 +199,6 @@ export default function Contact() {
                   placeholder="Tell us about your project"
                   rows={6}
                   value={formData.message}
-                  onChange={handleChange}
                   className="border-amber-600/20 focus:border-amber-600 focus:ring-amber-600 bg-gray-50 text-base"
                 />
               </div>
